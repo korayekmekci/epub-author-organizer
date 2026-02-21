@@ -1,4 +1,7 @@
 # 📚 EPUB Author Organizer
+## 🎬 Demo
+
+![Demo](assets/demo.gif)
 
 ![Python](https://img.shields.io/badge/python-3.x-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
