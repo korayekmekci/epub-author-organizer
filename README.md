@@ -15,3 +15,4 @@ A Python tool that automatically organizes EPUB files into author-based folders.
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+
