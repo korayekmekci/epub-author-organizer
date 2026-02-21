@@ -1,19 +1,48 @@
 # 📚 EPUB Author Organizer
 
+![Python](https://img.shields.io/badge/python-3.x-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-active-success)
+
 A powerful Python tool that automatically organizes your EPUB books into author-based folders.
 
-Perfect for large digital libraries.
+Designed for developers and digital library enthusiasts who want clean and structured book collections.
+
+---
+
+## 🎯 Why This Project?
+
+Managing large EPUB libraries manually is time-consuming and error-prone.
+
+This project solves that problem by automatically:
+
+- Detecting author metadata
+- Creating structured author folders
+- Organizing books safely
+- Allowing preview mode before changes
+
+It turns chaos into structure.
 
 ---
 
 ## ✨ Features
 
-- 📖 Reads EPUB metadata
+- 📖 Reads EPUB metadata (`dc:creator`)
 - 👤 Automatically detects author name
 - 📂 Creates author-based folders
 - 🔁 Recursive folder scanning (subfolders supported)
 - 🧪 Dry-run mode (preview changes safely)
 - 🛟 Handles missing metadata (`Unknown_Author` fallback)
+
+---
+
+## 🧠 How It Works
+
+- Uses `ebooklib` to read EPUB metadata
+- Extracts `dc:creator` field
+- Normalizes author names (safe folder format)
+- Uses `os.walk()` for recursive scanning
+- Moves files using `shutil`
 
 ---
 
@@ -32,13 +61,13 @@ pip install -r requirements.txt
 
 ## 🛠 Usage
 
-### Organize books:
+### Organize books
 
 ```bash
 python main.py /path/to/your/books
 ```
 
-### Preview changes (Dry Run):
+### Preview changes (Dry Run)
 
 ```bash
 python main.py /path/to/your/books --dry-run
